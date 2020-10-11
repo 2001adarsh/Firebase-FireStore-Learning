@@ -139,3 +139,13 @@ val listnervariable = docRef.addSnapshotListener { snapshot, e ->
 //After work has been done so that your event callbacks stop getting called. This allows the client to stop using bandwidth to receive updates., detach the listner
 listnervariable.remove()
 ```
+
+----
+---
+# Firebase Cloud Functions:
+
+Cloud Functions for Firebase is a serverless framework that lets you automatically run backend code in response to events triggered by Firebase features and HTTPS requests. Your JavaScript or TypeScript code is stored in Google's cloud and runs in a managed environment.
+
+### UseCases:
+1. Notify users when something interesting happens -> for example, if the user add's a follower the clound will directly write that in Realtime Database.Then this write event could trigger a function to create Firebase Cloud Messaging (FCM) notifications to let the appropriate users know that they have gained new followers.
+2. Many other functions which are written in the application can be written on the Cloud. https://firebase.google.com/docs/functions/use-cases
